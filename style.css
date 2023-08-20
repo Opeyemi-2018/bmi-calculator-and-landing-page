@@ -125,8 +125,7 @@ input[type="radio"] {
 }
 
 .result-box p {
-  font-size: 15px;
-  white-space: nowrap;
+  font-size: 18px;
   padding-bottom: 10px;
 }
 
@@ -290,6 +289,14 @@ input[type="radio"] {
 
   .check-box {
     padding: 0 40px 0 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .result-box p {
+    font-size: 18px;
+    padding-bottom: 10px;
+    white-space: wrap;
   }
 }
 
