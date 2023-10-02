@@ -2,43 +2,88 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #f1f6f9;
   font-family: "Poppins", sans-serif;
 }
 
+/*--------------header styling start--------------------*/
+header {
+  padding: 1% 2%;
+  background-color: #d80032;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header .header-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .header-div img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+header .header-div a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #e6fffd;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    padding: 0% 3%;
+  }
+  header .header-div img {
+    width: 30px;
+  }
+
+  header .header-div a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #e6fffd;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    padding: 1% 3%;
+  }
+}
+
+/*--------------header styling end--------------------*/
+
 main {
-  padding: 4% 2%;
+  padding: 1% 4% 2%;
+  background: #f1f6f9;
 }
 .first-con {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  margin-bottom: 30px;
 }
 
 .first-right-content {
   flex-basis: 45%;
-  background: #c5dff8;
-  padding: 7rem 5rem 7rem 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), #3551b5),
+    url(images/leg.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.first-right-content h1 {
-  padding-left: 3rem;
-}
-
-.first-right-content p {
-  padding-left: 3rem;
 }
 
 .first-right-content h1 {
   font-weight: 800;
   font-size: 30px;
-  color: #153677;
+  color: #d80032;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 .first-right-content p {
-  color: #666;
+  color: #fff;
+  line-height: 25px;
 }
 
 .left-content {
@@ -47,10 +92,6 @@ main {
   padding: 25px 13px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.left-content .right-input p {
-  padding-left: 3rem;
 }
 
 .left-content h3 {
@@ -83,7 +124,7 @@ label {
 .input-box {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
 }
 
 .input-box input {
@@ -92,18 +133,9 @@ label {
   border-radius: 5px;
 }
 
-.input-box .h {
-  margin-left: -3rem;
-}
-
 input[type="radio"] {
   height: 22px;
   width: 22px;
-}
-
-.input-box input::placeholder {
-  text-align: right;
-  color: #153677;
 }
 
 .input-box p {
@@ -151,22 +183,14 @@ input[type="radio"] {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1100px) {
   .first-right-content {
-    background: #c5dff8;
-    padding: 3rem 1rem;
+    flex-basis: 40%;
   }
 
   .left-content {
-    background: white;
-    padding: 20px 5px;
+    flex-basis: 40%;
   }
-
-  .left-content h3 {
-    font-size: 15px;
-    font-weight: 600;
-  }
-
   label {
     font-size: 13px;
   }
@@ -174,11 +198,11 @@ input[type="radio"] {
   .input-box {
     display: flex;
     justify-content: space-between;
-    margin: 0 1rem;
   }
 
   .input-box input {
-    padding: 7px 10px;
+    padding: 7px 0px;
+    text-align: center;
     border: 1px solid #999;
   }
 
@@ -189,7 +213,6 @@ input[type="radio"] {
   .result-box p {
     font-size: 13px;
     white-space: nowrap;
-    padding-right: 8px;
     padding-bottom: 5px;
   }
 }
@@ -201,18 +224,12 @@ input[type="radio"] {
   }
 
   .left-content h3 {
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 500;
   }
 
   label {
-    font-size: 11px;
-  }
-
-  .input-box input {
-    padding: 5px 8px;
-    border: 1px solid #999;
-    border-radius: 5px;
+    font-size: 14px;
   }
 
   .result-box h2 {
@@ -220,44 +237,29 @@ input[type="radio"] {
   }
 
   .result-box p {
-    font-size: 11px;
     white-space: nowrap;
     padding-bottom: 5px;
   }
   .first-con {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-direction: column;
   }
 
   .left-content {
+    margin-top: 40px;
     padding: 30px 15px;
-    width: 80%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 95%;
   }
 
   .first-right-content h1 {
     font-size: 22px;
-    text-align: center;
   }
 
   .first-right-content p {
     font-size: 19px;
-    text-align: center;
-    margin-right: 20px;
   }
 }
 
 @media screen and (max-width: 700px) {
-  .first-right-content {
-    width: 94%;
-  }
-  .first-right-content h1 {
-    font-size: 22px;
-    margin-right: 3rem;
-  }
-
   .input-box input {
     width: 100%;
   }
@@ -265,7 +267,6 @@ input[type="radio"] {
   .left-content {
     padding: 30px 15px;
     width: 90%;
-    margin-top: -2rem;
   }
 
   .calculate-btn button {
@@ -279,12 +280,19 @@ input[type="radio"] {
 }
 
 @media screen and (max-width: 600px) {
+  .left-content {
+    flex-basis: 45%;
+    background: white;
+    padding: 25px 5px;
+    border-radius: 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
   .input-box {
     flex-direction: column;
   }
 
   .input-box input {
-    width: 100%;
+    width: 95%;
   }
 
   .check-box {
@@ -292,16 +300,50 @@ input[type="radio"] {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
+  .first-right-content {
+    padding: 1rem;
+    width: 97%;
+  }
+
+  .left-content {
+    width: 100%;
+  }
+  .input-box p {
+    font-size: 17px;
+  }
+
+  .first-right-content p {
+    font-size: 12px;
+  }
+  .check-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px 0 0;
+  }
+
+  .left-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  input[type="radio"] {
+    height: 18px;
+    width: 18px;
+  }
   .result-box p {
-    font-size: 18px;
+    font-size: 11px;
     padding-bottom: 10px;
     white-space: wrap;
+  }
+
+  .input-box input {
+    padding: 4px 0px;
   }
 }
 
 /*-----------------------second section----------------------*/
-
 .second-con {
   display: flex;
   justify-content: space-between;
@@ -313,11 +355,10 @@ input[type="radio"] {
 
 .img-con {
   flex-basis: 45%;
-  width: 100%;
 }
 
 .img-con img {
-  width: 100%;
+  max-width: 100%;
   border-radius: 5px;
 }
 
@@ -405,6 +446,7 @@ input[type="radio"] {
 .third-section {
   padding: 3rem 0 1.5rem 0;
 }
+
 .bmi-tips {
   display: flex;
   justify-content: space-between;
@@ -422,8 +464,11 @@ input[type="radio"] {
   flex-basis: 25%;
   background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  padding: 3% 4%;
+  padding: 2% 4%;
   border-radius: 10px;
+}
+.tip-div:hover {
+  background-color: #f1f6f9;
 }
 
 .tip-div button {
@@ -576,7 +621,6 @@ input[type="radio"] {
   }
 
   .limitaion-content-1 {
-    text-align: center;
     margin-bottom: 10px;
   }
 }

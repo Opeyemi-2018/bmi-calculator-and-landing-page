@@ -17,9 +17,20 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header>
+      <div class="header-div">
+        <div class="image"><img src="images/logo.jpg" alt="" /></div>
+        <div class="about">
+          <a href="#second-section">About</a>
+        </div>
+      </div>
+    </header>
     <main>
       <div class="first-section">
         <div class="first-con">
@@ -27,7 +38,7 @@
             <h1>Body Mass index Calculater</h1>
             <p>
               Better understand your weight in relation to your height using our
-              body mass index (BM) calculator While BMI is not the sole
+              body mass index (BMI) calculator While BMI is not the sole
               determinant of a healthy weight, it offers a valuable starting
               point to evaluate your overall health and well-being
             </p>
@@ -52,18 +63,18 @@
             <div class="input-box">
               <div class="right-input">
                 <p class="h">height</p>
-                <input type="number" id="height" placeholder="cm" />
+                <input type="number" id="height" />
               </div>
               <div class="left-text">
                 <p class="w">weight</p>
-                <input type="number" id="weight" placeholder="kg" />
+                <input type="number" id="weight" />
               </div>
             </div>
             <div class="result-box">
               <div class="result-content">
                 <h2>Welcome</h2>
                 <p id="result">
-                  Enter yoyr height and weight and you will see your BMI result
+                  Enter your height and weight and you will see your BMI result
                   here
                 </p>
               </div>
@@ -75,7 +86,7 @@
         </div>
       </div>
 
-      <div class="second-section">
+      <div id="second-section" class="second-section">
         <div class="second-con">
           <div class="img-con">
             <img src="images/man.jpg" alt="" />
@@ -165,7 +176,7 @@
 
       <div class="fifth-section">
         <div class="bmi-tips">
-          <div class="tip-div">
+          <div class="tip-div fifth">
             <button class="first-btn">
               <i class="first-icon fas fa-regular fa-dumbbell"></i>
             </button>
@@ -178,7 +189,7 @@
             </div>
           </div>
 
-          <div class="tip-div">
+          <div class="tip-div sixth">
             <button class="second-btn">
               <i class="second-icon fas fa-regular fa-dumbbell"></i>
             </button>

@@ -61,3 +61,21 @@ calculate.addEventListener("click", () => {
     document.getElementById("height").value = "";
   }
 });
+
+/*-------------scroll reveal ----------------*/
+
+const sr = ScrollReveal({
+  distance: "45px",
+  duration: 2700,
+  reset: true,
+});
+
+sr.reveal(".first-right-content", { delay: 350, origin: "top" });
+sr.reveal(".img-con", { delay: 350, origin: "bottom" });
+sr.reveal(".second-con-content", { delay: 350, origin: "top" });
+sr.reveal(".tip-div", { delay: 350, origin: "top" });
+sr.reveal(".tip-content", { delay: 350, origin: "bottom" });
+sr.reveal(".limitaion-content-1", { delay: 350, origin: "top" });
+sr.reveal(".limitaion-conten", { delay: 350, origin: "bottom" });
+sr.reveal(".fifth", { delay: 350, origin: "top" });
+sr.reveal(".sixth", { delay: 350, origin: "bottom" });
